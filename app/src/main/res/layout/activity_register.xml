@@ -7,51 +7,52 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:textSize="20sp"
         android:id="@+id/edtnamereg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
         android:ems="10"
+        android:hint="Enter name"
         android:inputType="text"
-        android:text="Enter name"
+        android:text=""
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:textSize="20sp"
-        android:hint="Enter email"
         android:id="@+id/edtregemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
+        android:hint="Enter email"
         android:inputType="textEmailAddress"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/edtnamereg"
         app:layout_constraintTop_toBottomOf="@+id/edtnamereg" />
 
     <EditText
-        android:hint="Enter password"
-        android:textSize="20sp"
         android:id="@+id/edtregpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="29dp"
         android:ems="10"
+        android:hint="Enter password"
         android:inputType="textPassword"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/edtregemail"
         app:layout_constraintTop_toBottomOf="@+id/edtregemail" />
 
     <Button
-        android:textSize="20sp"
         android:id="@+id/btncreateuser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
         android:layout_marginTop="35dp"
         android:text="CREATE USER"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/edtregpass"
         app:layout_constraintTop_toBottomOf="@+id/edtregpass" />
 </androidx.constraintlayout.widget.ConstraintLayout>
