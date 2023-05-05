@@ -1,6 +1,7 @@
 package com.example.firebase_mark
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -40,12 +41,16 @@ class MainActivity : AppCompatActivity() {
             var carmodel = editcarmodel.text.toString().trim()
             var carprice = editcarprice.text.toString().trim()
 
+            var id = System.currentTimeMillis().toString()
+
+            var ref = database.getReference("cars/"+id)
+
             // validation
             if (carmake.isEmpty() || carmodel.isEmpty() || carprice.isEmpty()) {
                 Toast.makeText(this, "Error! Cannot upload empty fields", Toast.LENGTH_SHORT).show()
             } else {
                 // try to upload data
-                var usercar = Car(carmake, carmodel, carprice)
+                var usercar = Car(carmake, carmodel, carprice,id)
 
                 // creating a reference to FirebaseDatabase
                 var ref = FirebaseDatabase.getInstance().getReference().child("cars")
@@ -77,9 +82,8 @@ class MainActivity : AppCompatActivity() {
 
             // viewing uploaded img
             buttonview.setOnClickListener {
-                //var user_data = editdata.text.toString().trim()
-                //Toast.makeText(this, "user_data", Toast.LENGTH_SHORT).show()
-                //databaseRef.setValue(user_data)
+                var viewcars = Intent(this,Viewcars::class.java)
+                startActivity(viewcars)
             }
 
 

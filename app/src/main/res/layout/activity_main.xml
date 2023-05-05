@@ -10,38 +10,27 @@
         android:id="@+id/edtcarmake"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="134dp"
         android:ems="10"
         android:hint="Enter car make"
-        android:inputType="text"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtcarmodel"
-        app:layout_constraintEnd_toEndOf="@+id/edtcarmodel" />
-
-    <Button
-        android:id="@+id/btnviewcars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="24dp"
-        android:text="VIEW CARS"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/btnuploaddata"
-        app:layout_constraintTop_toBottomOf="@+id/btnuploaddata" />
-
-    <EditText
-        android:id="@+id/edtcarmodel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="221dp"
-        android:ems="10"
-        android:hint="Enter car model"
         android:inputType="text"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtcarmodel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Enter car model"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/edtcarmake"
+        app:layout_constraintTop_toBottomOf="@+id/edtcarmake" />
 
     <EditText
         android:id="@+id/edtcarprice"
@@ -60,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:text="UPLOAD PHOTO"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/edtcarprice"
@@ -76,4 +65,16 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/btnuploadimg"
         app:layout_constraintTop_toBottomOf="@+id/btnuploadimg" />
+
+    <Button
+        android:id="@+id/btnviewcars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:text="VIEW CARS"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/btnuploaddata"
+        app:layout_constraintTop_toBottomOf="@+id/btnuploaddata" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
